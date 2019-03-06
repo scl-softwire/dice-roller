@@ -1,6 +1,7 @@
 package com.training;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
@@ -8,9 +9,16 @@ public class Main {
         System.out.println("Welcome to the dice roller!");
         System.out.println("===========================");
 
-        Random rng = new Random();
-        int diceRoll = rng.nextInt(6) + 1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many dice would you like to roll?");
+        System.out.print("> ");
+        int diceToRoll = scanner.nextInt();
+        System.out.println();
 
-        System.out.println("You rolled: " + diceRoll);
+        for (int roll = 0; roll < diceToRoll; roll++) {
+            Random rng = new Random();
+            int diceRoll = rng.nextInt(6) + 1;
+            System.out.println("You rolled: " + diceRoll);
+        }
     }
 }
