@@ -10,13 +10,9 @@ public class Main {
         System.out.println("===========================");
 
         int sizeOfDice = getIntegerFromUser("What size of dice would you like to roll?");
-        int diceToRoll = getIntegerFromUser("How many dice would you like to roll?");
+        int numberOfRolls = getIntegerFromUser("How many dice would you like to roll?");
 
-        for (int roll = 0; roll < diceToRoll; roll++) {
-            Random rng = new Random();
-            int diceRoll = rng.nextInt(sizeOfDice) + 1;
-            System.out.println("You rolled: " + diceRoll);
-        }
+        System.out.println("Total roll: " + getSumOfDiceRolls(sizeOfDice, numberOfRolls));
     }
 
     private static int getIntegerFromUser(String prompt) {
@@ -25,5 +21,14 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
+    }
+
+    private static int getSumOfDiceRolls(int sizeOfDice, int numberOfRolls) {
+        Random rng = new Random();
+        int totalRoll = 0;
+        for (int roll = 0; roll < numberOfRolls; roll++) {
+            totalRoll += rng.nextInt(sizeOfDice) + 1;
+        }
+        return totalRoll;
     }
 }
