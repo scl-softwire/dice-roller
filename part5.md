@@ -31,6 +31,6 @@ public static void main(String[] args) {
 }
 ```
 
-In that example, there are methods `getCustomFacesFromUser`, `calculateCustomTotal` and `calculateStandardTotal`. There are probably other improvements to be made as well - that's just a start! See what you can come up with, and then it's working and you're happy with the code, push it to GitHub and get some feedback.
+In that example, there are methods `getCustomFacesFromUser`, `calculateCustomTotal` and `calculateStandardTotal`. There are probably other improvements to be made as well - that's just a start! See what you can come up with, and when it's working and you're happy with the code, push it to GitHub and get some feedback.
 
 [Part 6](part6.md) awaits...
