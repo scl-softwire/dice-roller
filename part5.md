@@ -23,7 +23,7 @@ public static void main(String[] args) {
     } else {
         int sizeOfDice = getIntegerFromUser();
         int numberOfRolls = getIntegerFromUser();
-        int totalRoll = calculateStandardTotal(customFaces, numberOfRolls);
+        int totalRoll = calculateStandardTotal(sizeOfDice, numberOfRolls);
         System.out.println(totalRoll);
     }
 
